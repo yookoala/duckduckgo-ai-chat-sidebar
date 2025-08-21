@@ -8,3 +8,6 @@
 *.xpi
 *.zip
 /dist/
+
+# Editor files or configurations
+/.vscode
