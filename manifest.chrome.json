@@ -18,7 +18,7 @@
     }
   },
   "action": {
-    "default_title": "Open Duck.ai Chat Sidebar"
+    "default_title": "Duck.ai Chat (Ctrl+Shift+1)"
   },
   "side_panel": {
     "default_path": "src/sidebar.html"
