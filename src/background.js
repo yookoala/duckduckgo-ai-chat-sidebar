@@ -1,6 +1,11 @@
 // Background service worker for the main Duck.ai Chat Sidebar extension.
-// Responds to cross-extension isOpen queries from the dev-helper during testing.
-browser.runtime.onMessageExternal.addListener((message, _sender) => {
+// Responds to cross-extension queries from the dev-helper during testing.
+// The listener is restricted to the known dev-helper extension ID — Firefox
+// populates sender.id from its own extension registry and it cannot be spoofed.
+const DEV_HELPER_ID = "dev-helper@duck-ai-sidebar.test";
+
+browser.runtime.onMessageExternal.addListener((message, sender) => {
+  if (sender.id !== DEV_HELPER_ID) return;
   if (message?.action === "isOpen") {
     return browser.sidebarAction.isOpen({});
   }
