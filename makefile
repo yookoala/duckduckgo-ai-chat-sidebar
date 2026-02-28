@@ -29,4 +29,9 @@ clean:
 	@echo -e "# Cleaned up the dist directory."
 	@echo -e "################################\n"
 
-.PHONY: all clean
+test: dist/firefox
+	npm ci
+	npx playwright install firefox
+	npx playwright test
+
+.PHONY: all clean test

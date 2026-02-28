@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Duck.ai Sidebar Dev Helper",
+  "version": "0.1.0",
+  "description": "Development-only testing bridge for ddg_ai_chat_in_sidebar.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "dev-helper@duck-ai-sidebar.test"
+    }
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://localhost/*"],
+      "js": ["content-bridge.js"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://duck.ai/*", "https://duckduckgo.com/*"],
+      "js": ["content-sidebar.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage"]
+}

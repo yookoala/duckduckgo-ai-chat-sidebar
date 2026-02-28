@@ -1,0 +1,41 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install Node dependencies
+        run: npm ci
+
+      # Install Firefox system libraries (gtk, nss, etc.).
+      # This requires root, which is available on GitHub-hosted runners but not
+      # needed for local runs — see makefile note about --with-deps.
+      - name: Install Playwright system dependencies
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: sudo -E npx playwright install-deps firefox
+
+      # Cache the downloaded Firefox binary so repeated runs are fast.
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-firefox-${{ hashFiles('package-lock.json') }}
+          restore-keys: playwright-firefox-
+
+      - name: Run tests
+        run: make test
