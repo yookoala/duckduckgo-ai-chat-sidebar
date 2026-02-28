@@ -39,6 +39,13 @@
     },
     "default_panel": "src/sidebar.html"
   },
+  "content_scripts": [
+    {
+      "matches": ["https://duck.ai/*"],
+      "js": ["src/content-sidebar.js"],
+      "run_at": "document_end"
+    }
+  ],
   "icons": {
     "16": "src/icons/icon.svg",
     "32": "src/icons/icon.svg",
