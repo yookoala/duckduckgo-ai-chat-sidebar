@@ -20,6 +20,15 @@
       "description": "Toggle sidebar action."
     }
   },
+  "action": {
+    "default_title": "Duck.ai Chat (Ctrl+Alt+C)",
+    "default_icon": {
+      "16": "src/icons/icon.svg",
+      "32": "src/icons/icon.svg",
+      "48": "src/icons/icon.svg",
+      "128": "src/icons/icon.svg"
+    }
+  },
   "sidebar_action": {
     "default_title": "Duck.ai Chat",
     "default_icon": {
