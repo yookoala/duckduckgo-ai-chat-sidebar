@@ -11,3 +11,10 @@
 
 # Editor files or configurations
 /.vscode
+
+# Node.js
+/node_modules
+
+# Playwright output
+/test-results
+/playwright-report

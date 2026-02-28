@@ -8,6 +8,9 @@
       "id": "{ddf262fb-721f-419f-85c2-4758156cbeb2}"
     }
   },
+  "background": {
+    "scripts": ["src/background.js"]
+  },
   "commands": {
     "_execute_sidebar_action": {
       "suggested_key": {
