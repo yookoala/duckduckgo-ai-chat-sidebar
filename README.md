@@ -10,7 +10,7 @@
 Running [Duck.ai Chat](https://duck.ai) on a sidebar.
 
 Duck.ai is an AI Chat service provided by [DuckDuckGo][duckduckgo-about] on their website.
-As of Aug, 2025, the AI Chat service allow user to use:
+As of Feb, 2026, the AI Chat service allow user to use:
 * [GPT-5 mini][gpt-5-mini]
 * [GPT-4o mini][gpt-4o-mini]
 * [GPT-OSS 120B][gpt-oss]
