@@ -11,11 +11,12 @@ Running [Duck.ai Chat](https://duck.ai) on a sidebar.
 
 Duck.ai is an AI Chat service provided by [DuckDuckGo][duckduckgo-about] on their website.
 As of Aug, 2025, the AI Chat service allow user to use:
-* [GPT-4o mini][chatgpt-4o-mini]
-* [Llama 4][llama-4]
-* [Claude Haiku 3.5][claude-haiku-3.5]
-* [o4-mini][chatgpt-o4-mini]
-* [Mixtral Small 3][mixtral-small-3]
+* [GPT-5 mini][gpt-5-mini]
+* [GPT-4o mini][gpt-4o-mini]
+* [GPT-OSS 120B][gpt-oss]
+* [Llama 4 Scout][llama-4]
+* [Claude Haiku 4.5][claude-haiku-4.5]
+* [Mistral Small 3][mistral-small-3]
 
 anonymously and free of charge.
 
@@ -23,12 +24,18 @@ This extension allow you to open the Duck.ai chat interface on the
 sidebar. Feels much like the Microsoft Edge Copilot sidebar. And with the help
 of Duck.ai, you're using AI with no personal data and privacy compromise.
 
-[chatgpt-4o-mini]: https://openai.com/index/hello-gpt-4o/
-[chatgpt-o4-mini]: https://help.openai.com/en/articles/10491870-o4-mini-in-chatgpt-faq
-[claude-haiku-3.5]: https://www.anthropic.com/claude/haiku
+![Available models selection][available-models-screenshot]
+![Screenshot of the sidebar][sidebar-screenshot]
+
+[gpt-5-mini]: https://developers.openai.com/api/docs/models/gpt-5-mini
+[gpt-4o-mini]: https://developers.openai.com/api/docs/models/gpt-4o-mini
+[gpt-oss]: https://openai.com/index/introducing-gpt-oss/
+[claude-haiku-4.5]: https://www.anthropic.com/news/claude-haiku-4-5
 [llama-4]: https://www.llama.com/models/llama-4/
-[mixtral-small-3]: https://mistral.ai/news/mistral-small-3
+[mistral-small-3]: https://mistral.ai/news/mistral-small-3
 [duckduckgo-about]: https://duckduckgo.com/about
+[available-models-screenshot]: docs/images/available-models-20260228.webp
+[sidebar-screenshot]: docs/images/sidebar-screenshot-20260228.webp
 
 
 ## License
