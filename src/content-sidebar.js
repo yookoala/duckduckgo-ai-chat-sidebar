@@ -6,6 +6,13 @@ if (window.name === "duck_ai_sidebar") {
   const focusTextarea = () => {
     const textarea = document.querySelector("textarea");
     if (textarea) {
+      // window.focus() requests OS-level keyboard focus for this browsing
+      // context (the sidebar panel). Must be called from page script context
+      // (not privileged moz-extension:// context) to have any effect.
+      window.focus();
+      // click() + focus() together give the strongest signal: click() is
+      // treated as a user gesture which bypasses browser focus-stealing guards.
+      textarea.click();
       textarea.focus();
       return true;
     }
