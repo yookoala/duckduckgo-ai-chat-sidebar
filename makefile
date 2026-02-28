@@ -31,7 +31,7 @@ clean:
 
 test: dist/firefox
 	npm ci
-	npx playwright install --with-deps firefox
+	npx playwright install firefox
 	npx playwright test
 
 .PHONY: all clean test
